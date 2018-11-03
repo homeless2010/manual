@@ -4,6 +4,6 @@
 
 * 配置环境变量
  1. maven环境变量
-  ![](http://www.cuichaojiang.xin/?attachment_id=177)
+  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/m2_home.png)
  2. 添加path
-  ![](http://www.cuichaojiang.xin/?attachment_id=178)
+  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/path.png)
