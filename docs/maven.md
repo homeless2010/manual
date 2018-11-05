@@ -2,15 +2,15 @@
 * [下载maven](http://maven.apache.org/download.cgi)
 >maven3.3+需要jdk1.7或更高版本
 
-* 配置环境变量
- 1. maven环境变量    
+* **配置环境变量**
+ 1. maven环境变量
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/m2_home.png)
  2. 添加path    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/path.png)    
  3. 在cmd命令窗口中执行mvn -v    
   如图则安装成功    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/mvn.png)    
-* 配置镜像与仓库地址    
+* **配置镜像与仓库地址**    
   1. Repository（仓库）
   ![](https://cdn.www.sojson.com/file/17-12-20-22-34-47/doc/8469051458)    
   2. Mirror    
@@ -25,6 +25,7 @@
   - 在左侧找到Maven Build 点击右键新建    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/debug1.png)    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/debug2.png)    
+  *-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M*    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/debug3.png)    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/debug4.png)    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/debug5.png)    
@@ -32,7 +33,8 @@
 3. 运行
   - 启动报错找不到jetty插件需要在pom中配置或者在setting.xml中配置    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/jetty6.png)    
-  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/jetty7.png)   
+  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/jetty7.png)    
+  *`<pluginGroup>org.mortbay.jetty</pluginGroup>`*   
   再次启动    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/success.png)    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/success2.png)
@@ -43,7 +45,8 @@
   ***利用远程调试来调试本地代码***    
   项目右键Run as 找到 Debug Configurations...    
   **首先需要在上面步骤二中加入调试相关虚拟机参数**   
-  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/remote4.png)    
+  ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/remote4.png)   
+  *-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8888*        
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/remote1.png)    
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/remote2.png)     
   ![](http://www.cuichaojiang.xin/wp-content/uploads/2018/11/remote3.png)    
